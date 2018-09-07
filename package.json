@@ -1,0 +1,16 @@
+{
+  "name": "dottystyle",
+  "version": "1.0.0",
+  "description": "the whitsundays a movie that's waiting to be written",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "movie",
+    "social",
+    "media"
+  ],
+  "author": "Kevin M. Gallarin",
+  "license": "ISC"
+}

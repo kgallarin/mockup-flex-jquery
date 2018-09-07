@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'Open-Sans';
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OpenSans-Regular-webfont.woff') format('woff2'),
+       url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+       url('../fonts/OpenSans-Regular-webfont.svg#OpenSans') format('svg');
+}
+
+body{
+    background:#195270;
+    margin: 0;
+    padding:0;
+    font-family: 'Open-Sans',sans-serif
+}
+li{
+    list-style: none;
+}
+header{
+    display: flex;
+    background:#333333;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    z-index: 1300;
+}
+
+nav{
+    width: 100%;
+    font-size: 14px;
+    width: 960px;
+    background:#333333;
+}
+
+.margin-sm-r{
+    margin-right: 8px;
+}
+
+
+/* flex container */
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 75px;
+}
+.flex-container--start{
+    justify-content: flex-start;
+    margin-top: -125px;
+}
+
+.flex-container__item{
+    flex: 0 1 auto;
+}
+
+.flex-container__item:last-child {
+    border: 0;
+}
+
+/* Primary Nav */
+.primary-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.primary-nav__list {
+    list-style: none;
+    border-right: 1px solid #484848;
+}
+
+.flex-container__item:first-child .primary-nav__link {
+    padding: 0 10px 0px 0;
+}
+
+.primary-nav__link {
+    display: flex;
+    height: 46px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+}
+
+/* Secondary Nav */
+.secondary-nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.secondary-nav__list {
+    list-style: none;
+}
+
+.secondary-nav__link {
+    display: flex;
+    align-content: center;
+    height: 40px;
+    padding: 0 20px;
+    background: #282828;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    width: 134px;
+    height: 34px;
+    border-radius: 10px;
+}
+
+.secondary-nav__link span{
+    width: 100%;
+    text-align: center;
+}
+
+
+.section {
+    background-size: 100% 100%;
+}
+
+
+.first-slide{
+    background-image: url("../img/slidebg/first_slide.jpg") ;
+    background-repeat: no-repeat;
+}
+.first-slide__flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.first-slide__flex-container__item{
+    flex-basis: 55%;
+    flex-direction: row;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.first-slide__flex-container__item:first-child{
+    flex-basis: 45%;
+}
+.first-slide__flex-container__item:first-child .image-wrapper{
+    width: 70%;
+    display: block;
+    margin: -15px auto 0;
+    height: auto;
+}
+
+.second__slide {
+    background-image: url("../img/slidebg/second_slide.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.third__slide {
+    background-image: url("../img/slidebg/third_slide.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.fourth__slide {
+    background-image: url("../img/slidebg/fourth_slide.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* icon farm */
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.icon{
+    display: inline-block;
+    background-size: 100% 100%;
+}
+
+.icon__logo{
+    background-image: url('../img/logo.png');
+    height: 36px;
+    width:36px;
+}
+
+.icon__download {
+    background-image: url('../img/download_icon.png');
+    height: 14px;
+    width: 16px;
+}
+
+.icon__play{
+    background-image: url('../img/play.png');
+    height: 112px;
+        width: 112px;
+    margin-top: 40px;
+
+}
+
+/* fullPagejs style overrides */
+.fp-viewing-0 #fp-nav{
+    display: none !important;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span{
+    background:#fff;
+}
+
+
+@media all and (max-width: 760px){
+    .first-slide__flex-container {
+        flex-direction: column;
+    }
+    .first-slide__flex-container__item {
+        justify-content: center;
+    }
+    .section {
+        background-size: cover;
+    }
+
+}
