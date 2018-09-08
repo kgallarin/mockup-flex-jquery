@@ -5,44 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="src/styles/vendor/jquery.fullPage.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" href="src/styles/vendor/swiper.min.css">
         <link rel="stylesheet" href="src/styles/App.css">
+
         <title>Document</title>
     </head>
     <body>
-        <section class="main-container">
+        <div class="main-container">
             <header>
-                <nav class="flex-container">
-                    <ul class="primary-nav flex-container">
-                        <li class="primary-nav__list flex-container__item">
-                            <a class="primary-nav__link" href="#">
-                                <i class="icon icon__logo"></i>        
-                            </a>
-                        </li>
-                        <li class="primary-nav__list flex-container__item">
-                            <a class="primary-nav__link" href="#">Background & Challenge</a>
-                        </li>
-                        <li class="primary-nav__list flex-container__item">
-                            <a class="primary-nav__link" href="#">Solution</a>
-                        </li>
-                        <li class="primary-nav__list flex-container__item">
-                            <a class="primary-nav__link" href="#">Results and Effectiveness</a>
-                        </li>
-                        <li class="primary-nav__list flex-container__item">
-                            <a class="primary-nav__link" href="#">Slideshow</a>
-                        </li>
-                    </ul>
-                    <ul class="secondary-nav">
-                        <li class="secondary-nav__list"> 
-                            <a href="#" class="secondary-nav__link">
-                                <span><i class="icon icon__download margin-sm-r"></i>Download Board</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="flex-container">
+                    <nav class="flex-container">
+                        <ul class="primary-nav flex-container">
+                            <li class="primary-nav__list flex-container__item">
+                                <a class="primary-nav__link" href="#">
+                                    <i class="icon icon__logo"></i>
+                                </a>
+                            </li>
+                            <li class="primary-nav__list flex-container__item">
+                                <a class="primary-nav__link" href="#">Background & Challenge</a>
+                            </li>
+                            <li class="primary-nav__list flex-container__item">
+                                <a class="primary-nav__link" href="#">Solution</a>
+                            </li>
+                            <li class="primary-nav__list flex-container__item">
+                                <a class="primary-nav__link" href="#">Results and Effectiveness</a>
+                            </li>
+                            <li class="primary-nav__list flex-container__item">
+                                <a class="primary-nav__link" href="#">Slideshow</a>
+                            </li>
+                        </ul>
+                        <ul class="secondary-nav">
+                            <li class="secondary-nav__list">
+                                <a href="#" class="secondary-nav__link">
+                                    <span>
+                                        <i class="icon icon__download margin-sm-r"></i>Download Board</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
-            <div id="fullPage">
-                <div class="section first-slide">  
+            <div id="fullPage" class="content-container">
+                <div class="section first-slide">
                     <div class="flex-container">
                         <div class="first-slide__logo-wrapper">
                             <div class="first-slide__image-wrapper">
@@ -55,32 +59,32 @@
                     </div>
                 </div>
                 <div class="section second-slide">
-                    <div class="flex-container flex-container--even">
+                    <div class="container flex-container">
                         <div class="flex-container__item">
-                            <div class="second-slide__logo-wrapper">
+                            <div class="flex-container second-slide__logo-wrapper">
                                 <img src="src/img/second_slide_logo.png" alt="">
                             </div>
                         </div>
                         <div class="flex-container__item">
-                            <div class="second-slide__text-content">
+                            <div class="second-slide__text-content margin-left">
                                 <div class="second-slide__text-container">
-                                    <h1 class="second-slide__text-content title--primary">
+                                    <h1 class="title--primary">
                                         Background & Audience
                                     </h1>
-                                    <p>Tourism & Events Queensland wanted to increase consideration of The Whitsundays amongst ‘social fun seekers’; digitally savvy
-                                        consumers that socialise substantially online.
+                                    <p>Tourism & Events Queensland wanted to increase consideration of The Whitsundays amongst ‘social fun
+                                        seekers’; digitally savvy consumers that socialise substantially online.
                                     </p>
                                 </div>
                                 <div class="second-slide__text-container">
-                                    <h1 class="second-slide__text-content title--primary">
-                                         Problem
+                                    <h1 class="title--primary">
+                                        Problem
                                     </h1>
                                     <p>
                                         The Whitsundays was losing its cachet as an aspirational holiday location.
                                     </p>
                                 </div>
                                 <div class="second-slide__text-container">
-                                    <h1 class="second-slide__text-content title--primary">
+                                    <h1 class="title--primary">
                                         Objective
                                     </h1>
                                     <p>
@@ -88,11 +92,11 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>       
+                        </div>
                     </div>
                 </div>
                 <div class="section third__slide">
-                    <div class="flex-container">
+                    <div class="flex-container container">
                         <div class="flex-container__item--full">
                             <h1 class="center title--primary ">Solution</h1>
                         </div>
@@ -100,75 +104,125 @@
                             <div class="flex-container__item">
                                 <div class="flex-container flex-container-end">
                                     <div class="third-slide__text-container">
-                                        <p>We knew movies rated high on the list of our target’s interests and, with incredible beaches, seaplanes, yachts and glamorous
-                                            locations, the Whitsundays is the perfect setting for a movie.</p>
+                                        <p>We knew movies rated high on the list of our target’s interests and, with incredible beaches,
+                                            seaplanes, yachts and glamorous locations, the Whitsundays is the perfect setting for a movie.</p>
                                         <p>So we invited Australians to write it:</p>
-                                    
+            
                                         <p class="title--secondary">
                                             The Whitsundays. A movie that’s waiting to be written.
                                         </p>
                                         <p>
                                             We enlisted world-renowned screenwriter Craig Pearce as Script Supervisor. Then for 20 days we posted a daily storyboard
-                                            image on Facebook and Instagram, inviting the public to write scenes for a chance to win a $10,000 luxury holiday.
+                                            image on Facebook and Instagram, inviting the public to write scenes for a chance to win
+                                            a $10,000 luxury holiday.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex-container__item">
-                                <div class="flex-container flex-container--start">
-                                    <div class="third-slide__text-container">
-                                        <p>The campaign launched with a trailer, radio and online advertising. </p>
-                                        <p>
-                                            We reacted to the storyline as it developed, selecting and treating images according to the previous winning scene.
-                                        </p>
-                                        <p>
-                                            Each scene written and shared became a compelling “ad” for the Whitsundays.
-                                        </p>
-                                        <p>
-                                            Together, a Hollywood screenwriter and the Australian public had created the world’s first crowd-sourced movie storyboard
-                                            and a story universe with millions of possible permutations.
-                                        </p>
-                                    </div>
+                            <div class="flex-container__item margin-left">
+                                <div class="third-slide__text-container">
+                                    <p>The campaign launched with a trailer, radio and online advertising. </p>
+                                    <p>
+                                        We reacted to the storyline as it developed, selecting and treating images according to the previous winning scene.
+                                    </p>
+                                    <p>
+                                        Each scene written and shared became a compelling “ad” for the Whitsundays.
+                                    </p>
+                                    <p>
+                                        Together, a Hollywood screenwriter and the Australian public had created the world’s first crowd-sourced movie storyboard
+                                        and a story universe with millions of possible permutations.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="section fourth__slide">
-                    <div class="container">
-                    
-                        <ul class="tabs">
-                            <li class="tab-link current" data-tab="tab-1">Tab One</li>
-                            <li class="tab-link" data-tab="tab-2">Tab Two</li>
-                            <li class="tab-link" data-tab="tab-3">Tab Three</li>
-                            <li class="tab-link" data-tab="tab-4">Tab Four</li>
-                        </ul>
-                    
-                        <div id="tab-1" class="tab-content current">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <div class="container flex-container">
+                        <div class="flex-container__item--full center">
+                            <ul class="tabs">
+                                <li class="tab-link current" current-tab="tab-1">Video</li>
+                                <li class="tab-link" current-tab="tab-2">Photography</li>
+                                <li class="tab-link" current-tab="tab-3">Social</li>
+                                <li class="tab-link" current-tab="tab-4">PR</li>
+                            </ul>
                         </div>
-                        <div id="tab-2" class="tab-content">
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <div class="flex-container__item--full content-tabs">
+                            <div id="tab-1" class="tab-content current">
+                                <div class="flex-container flex-container--stretch">
+                                    <div class="flex-container__item">
+                                        <div class="fourth_slide__slider-container">
+                                            <div class="swiper-container">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="video-container">
+                                                            <video width="100%" controls="false" preload="metadata" controls="false" poster="http://placehold.it/910x606">
+                                                                <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                                                            </video>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="video-container">
+                                                            <video width="100%" controls="false" preload="metadata" controls="false" poster="http://placehold.it/910x606">
+                                                                <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                                                            </video>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="video-container">
+                                                            <video width="100%" controls="false" preload="metadata" controls="false" poster="http://placehold.it/910x606">
+                                                                <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                                                            </video>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="video-container">
+                                                            <video width="100%" controls="false" preload="metadata" controls="false" poster="http://placehold.it/910x606">
+                                                                <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                                                            </video>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="video-container">
+                                                            <video width="100%" controls="false" preload="metadata" controls="false" poster="http://placehold.it/910x606">
+                                                                <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+                                                            </video>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="fourth__slide__text_container flex-container__item">
+                                        <p>A 60 second promotional movie trailer played on TV, online as pre rolls and via Facebook, 
+                                            to promote the movie that was waiting to be written to our movie-loving target audience, 
+                                            and encourage them to enter.
+                                        </p>
+                                        <a class="button button--primary" href="#">asd</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-content">
+                                2
+                            </div>
+                            <div id="tab-3" class="tab-content">
+                                3
+                            </div>
+                            <div id="tab-4" class="tab-content">
+                                4
+                            </div>
                         </div>
-                        <div id="tab-3" class="tab-content">
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </div>
-                        <div id="tab-4" class="tab-content">
-                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    
                     </div>
                     <!-- container -->
+
                 </div>
             </div>
-        </section>
+        </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="src/vendors/scrolloverflow.min.js"></script>
         <script src="src/vendors/jquery.fullPage.js"></script>
+        <!-- <script src="src/vendors/scrolloverflow.min.js"></script> -->
+        <script src="src/vendors/swiper.min.js"></script>
         <script src="src/App.js"></script>
     </body>
 </html>

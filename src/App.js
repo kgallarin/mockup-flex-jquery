@@ -1,18 +1,30 @@
 $(document).ready(function(){
     $('#fullPage').fullpage({
-        slidesNavigation: true, 
+        // slidesNavigation: true, 
         lazyLoading: false,
-        autoScrolling: false,
-        navigation:true
+        scrollOverflow: false,
+        // allowPageScroll:true,
+        slidesPerView:1,
+        spaceBetween:'15px',
+        navigation: true
     });
-
+    $.fn.fullpage.setAutoScrolling(false);
     $('ul.tabs li').click(function () {
-        var tab_id = $(this).attr('data-tab');
+        let tab_id = $(this).attr('current-tab');
 
         $('ul.tabs li').removeClass('current');
         $('.tab-content').removeClass('current');
 
         $(this).addClass('current');
         $("#" + tab_id).addClass('current');
-    })
+    });
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+    });
+
 })
