@@ -1,30 +1,72 @@
 $(document).ready(function(){
     $('#fullPage').fullpage({
-        // slidesNavigation: true, 
         lazyLoading: false,
         scrollOverflow: false,
-        // allowPageScroll:true,
-        slidesPerView:1,
         spaceBetween:'15px',
-        navigation: true
+        navigation: true,
+        autoScrolling: false,
+        fitToSection: false,
     });
     $.fn.fullpage.setAutoScrolling(false);
-    $('ul.tabs li').click(function () {
-        let tab_id = $(this).attr('current-tab');
+    
+    
 
-        $('ul.tabs li').removeClass('current');
-        $('.tab-content').removeClass('current');
+    let swiperPhoto = '';
+    let swiperSocial = '';
+    let swiperPr = '';
+    let swiperRadio = '';
+    $(function () {
+        $("#tab").tabs();
 
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
+        let swiperVideo = new Swiper('.video', {
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true
+            }
+        });
+        $('.photography').click(function() {
+            let swiperPhoto = new Swiper('.photography', {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true
+                }
+            });
+        });
+        $('.social').click(function () {
+            let swiperSocial = new Swiper('.social', {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true
+                }
+            });
+        })
+        $('.pr').click(function () {
+            let swiperPr = new Swiper('.pr', {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true
+                }
+            });
+        })
+        $('.radio').click(function () {
+            let swiperRadio = new Swiper('.radio', {
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true
+                }
+            });
+        })
     });
-
-    var swiper = new Swiper('.swiper-container', {
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
-    });
+    
 
 })

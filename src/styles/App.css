@@ -103,7 +103,7 @@ header .flex-container__item {
     text-align: center;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 .button--primary{
     background: #178bc1;
@@ -285,21 +285,33 @@ ul.tabs li {
     display: inline-block;
     padding: 10px 15px;
     cursor: pointer;
+    outline: none;
 }
 
-ul.tabs li.current {
+ul.tabs li a{
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+
+ul.tabs li.ui-tabs-active {
     border-radius: 4px;
     background: #0000003b;
 }
 
+
 .tab-content {
     display: none;
-    /* background: #ededed; */
+    min-width: 320px;
     padding: 15px;
 }
 
 .tab-content.current {
-    display: inherit;
+    display: block;
+}
+
+.ui-widget-content{
+    background:transparent;
 }
 
 /* fullPagejs style overrides */
@@ -348,17 +360,21 @@ ul.tabs li.current {
     height: auto !important;
 }
 
-.fourth_slide__slider-container{
-    width: 600px;
-}
-
 /* swiper */
 .swiper-container {
-    height: 399px;
+    width: 690px;
+    height: 380px;
 }
-
+.swiper-slide img{
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
 .fourth__slide__text_container{
     margin-left: 30px;
+}
+.fourth__slide__text_container p{
+    margin-bottom: 50px;
 }
 .swiper-pagination{
     width: 100%;
@@ -389,7 +405,6 @@ ul.tabs li.current {
 video {
     object-fit: cover;
     border-radius: 4px;
-    height: 399px;
 }
 
 @media all and (max-width:1300px){
@@ -399,7 +414,6 @@ video {
         margin: 0 0 12px 0;
     }
     .title--secondary {
-        /* font-size: 20px; */
         font-weight: normal;
     }
 }
@@ -408,11 +422,27 @@ video {
     .content-container .flex-container {
         flex-direction: column;
     }
+    .fourth__slide__text_container{
+        margin: 0;
+    }
+    .swiper-container {
+        width: 305px;
+        height: 180px;
+    }
     .margin-left{
         margin-left: 0;
     }
-    .fourth_slide__slider-container {
-        /* width: 100%; */
+    .title--primary {
+        font-size: 30px;
+        font-weight: normal;
+        margin: 0 0 12px 0;
     }
-
+    .title--secondary {
+        font-size: 20px;
+    }
+    .first-slide__image-wrapper img{
+        width: 95%;
+        margin: 0 auto;
+        height: 100%;
+    }
 }
