@@ -8,30 +8,35 @@
         <link rel="stylesheet" href="src/styles/vendor/swiper.min.css">
         <link rel="stylesheet" href="src/styles/App.css">
 
-        <title>Document</title>
+        <title>Whitsundays</title>
     </head>
     <body>
         <div class="main-container">
+            <div id="loadingAssets">
+                <img src="src/img/ajax-loader.gif" alt="Loading" />
+                Loading...
+            </div>
             <header>
                 <div class="flex-container">
-                    <nav class="flex-container">
-                        <ul class="primary-nav flex-container">
-                            <li class="primary-nav__list flex-container__item">
-                                <a class="primary-nav__link" href="#">
+                    <nav class="flex-container flex-container--start">
+                        <a class="toggle" href="#">Menu</a>
+                        <ul id="menu" class="primary-nav flex-container">
+                            <li class="primary-nav__list flex-container__item" data-anchor="firstPage">
+                                <a class="primary-nav__link" href="#firstPage">
                                     <i class="icon icon__logo"></i>
                                 </a>
                             </li>
-                            <li class="primary-nav__list flex-container__item">
-                                <a class="primary-nav__link" href="#">Background & Challenge</a>
+                            <li class="primary-nav__list flex-container__item" data-anchor="secondPage">
+                                <a class="primary-nav__link"  href="#secondPage">Background & Challenge</a>
+                            </li>
+                            <li class="primary-nav__list flex-container__item" data-anchor="thirdPage">
+                                <a class="primary-nav__link" href="#thirdPage">Solution</a>
                             </li>
                             <li class="primary-nav__list flex-container__item">
-                                <a class="primary-nav__link" href="#">Solution</a>
+                                <a class="primary-nav__link" href="#"thirdPage>Results and Effectiveness</a>
                             </li>
-                            <li class="primary-nav__list flex-container__item">
-                                <a class="primary-nav__link" href="#">Results and Effectiveness</a>
-                            </li>
-                            <li class="primary-nav__list flex-container__item">
-                                <a class="primary-nav__link" href="#">Slideshow</a>
+                            <li class="primary-nav__list flex-container__item" data-anchor="fourthPage">
+                                <a class="primary-nav__link" href="#fourthPage">Slideshow</a>
                             </li>
                         </ul>
                         <ul class="secondary-nav">
@@ -200,9 +205,9 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <div class="fourth__slide__text_container flex-container__item">
-                                            <p>A 60 second promotional movie trailer played on TV, online as pre rolls and via Facebook, 
-                                                to promote the movie that was waiting to be written to our movie-loving target audience, 
-                                                and encourage them to enter.
+                                            <p>
+                                                Shots posted on Facebook and Instagram every day inspired thousands of entries. We reacted to the storyline as it developed in real time, 
+                                                selecting and treating the next image according to the day’s winning scene. 
                                             </p>
                                             <a href="#" class="button button--primary">View Project</a>
                                         </div>
@@ -227,9 +232,9 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <div class="fourth__slide__text_container flex-container__item">
-                                            <p>A 60 second promotional movie trailer played on TV, online as pre rolls and via Facebook, 
-                                                to promote the movie that was waiting to be written to our movie-loving target audience, 
-                                                and encourage them to enter.
+                                            <p>
+                                                The complete movie storyboard showcased the entire story, completely inspired by stunning images 
+                                                captured in the Whitsundays, with all 20 winning scenes accompanying the images.
                                             </p>
                                             <a href="#" class="button button--primary">View Project</a>
                                         </div>
@@ -254,9 +259,9 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <div class="fourth__slide__text_container flex-container__item">
-                                            <p>A 60 second promotional movie trailer played on TV, online as pre rolls and via Facebook, 
-                                                to promote the movie that was waiting to be written to our movie-loving target audience, 
-                                                and encourage them to enter.
+                                            <p>
+                                                We enlisted the help of Craig Pearce as script supervisor, who was tasked with choosing the winner each 
+                                                day to ensure the story flowed properly, and providing daily writing tips to encourage people to take part.
                                             </p>
                                             <a href="#" class="button button--primary">View Project</a>
                                         </div>
@@ -287,9 +292,9 @@
                                             <div class="swiper-pagination"></div>
                                         </div>
                                         <div class="fourth__slide__text_container flex-container__item">
-                                            <p>A 60 second promotional movie trailer played on TV, online as pre rolls and via Facebook, 
-                                                to promote the movie that was waiting to be written to our movie-loving target audience, 
-                                                and encourage them to enter.
+                                            <p>
+                                                Live reads from NOVA presenters reflected the ever-evolving story of 
+                                                Jake in real time, and encouraged people to get involved to shape the story themselves.
                                             </p>
                                             <a href="#" class="button button--primary">View Project</a>
                                         </div>
@@ -298,8 +303,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- container -->
-
                 </div>
             </div>
         </div>

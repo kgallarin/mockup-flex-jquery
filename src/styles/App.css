@@ -56,6 +56,33 @@ nav {
     margin: 0 auto;
     padding: 40px 20px 0;
 }
+
+#loadingAssets{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    color: #121212;
+    align-content: center;
+    text-align: center;
+    padding-top: 150px;
+    overflow: hidden;
+}
+
+#loadingAssets img{
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+a.toggle{
+    display: none;
+    color: #fff;
+    padding: 10px 0;
+}
 /* flex container */
 .flex-container{
     display: flex;
@@ -64,7 +91,6 @@ nav {
     flex-wrap: wrap;
 }
 .flex-container--start {
-    align-items: flex-start;
     justify-content: flex-start;
 }
 .flex-container--even {
@@ -112,7 +138,6 @@ header .flex-container__item {
 .primary-nav {
     margin: 0;
     padding: 0;
-    height: 75px;
 }
 
 .primary-nav__list {
@@ -131,6 +156,11 @@ header .flex-container__item {
     color: #fff;
     text-decoration: none;
     align-items: center;
+}
+.primary-nav__link:hover,
+a.toggle:hover{
+    color:#dfc988;
+    transition: .5s all ease;
 }
 
 /* Secondary Nav */
@@ -164,7 +194,6 @@ header .flex-container__item {
     text-align: center;
 }
 
-
 .section {
     background-size: 100% 100%;
 }
@@ -178,7 +207,7 @@ header .flex-container__item {
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    margin: 0 75px;
+    margin: 0 100px;
 }
 .first-slide__image-wrapper img{
     height: auto;
@@ -272,6 +301,7 @@ img{
 
 }
 
+
 /* tabs */
 
 ul.tabs {
@@ -303,7 +333,6 @@ ul.tabs li.ui-tabs-active {
 .tab-content {
     display: none;
     min-width: 320px;
-    padding: 15px;
 }
 
 .tab-content.current {
@@ -319,8 +348,9 @@ ul.tabs li.ui-tabs-active {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    min-height: 740px;
 }
-.fp-viewing-0 #fp-nav{
+.fp-viewing-firstPage #fp-nav {
     display: none !important;
 }
 
@@ -376,6 +406,12 @@ ul.tabs li.ui-tabs-active {
 .fourth__slide__text_container p{
     margin-bottom: 50px;
 }
+.fourth__slide .container{
+    padding: 0;
+}
+
+
+
 .swiper-pagination{
     width: 100%;
     box-sizing: border-box;
@@ -407,6 +443,7 @@ video {
     border-radius: 4px;
 }
 
+
 @media all and (max-width:1300px){
     .title--primary {
         font-size: 40px;
@@ -418,12 +455,50 @@ video {
     }
 }
 
+@media all and (max-width:970px){
+    header .flex-container__item {
+        width: 100%;
+        border: 0;
+    }
+    .flex-container__item:first-child 
+    .primary-nav__link{
+        padding-left: 15px;
+    }
+    nav.flex-container{
+        justify-content: flex-start;
+    }
+    nav.toggled .primary-nav{
+        z-index: 9;
+        display: none;
+    }
+    nav.toggled .secondary-nav {
+        display: none;
+        padding: 0;
+    }
+    a.toggle{
+        display: block;
+    }
+    .primary-nav__link {
+        align-items: center;
+        padding: 0;
+        padding-left: 15px;
+    }
+    .secondary-nav{
+        justify-content: flex-start;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 @media all and (max-width: 768px){
     .content-container .flex-container {
         flex-direction: column;
     }
     .fourth__slide__text_container{
         margin: 0;
+        padding: 0 20px;
     }
     .swiper-container {
         width: 305px;
@@ -432,17 +507,28 @@ video {
     .margin-left{
         margin-left: 0;
     }
-    .title--primary {
-        font-size: 30px;
-        font-weight: normal;
-        margin: 0 0 12px 0;
-    }
-    .title--secondary {
-        font-size: 20px;
-    }
     .first-slide__image-wrapper img{
         width: 95%;
         margin: 0 auto;
         height: 100%;
+    }
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px 20px 0;
+    }
+}
+
+@media all and (max-width:475px){
+    .title--primary {
+        font-size: 27px;
+        font-weight: normal;
+        margin: 0 0 12px 0;
+    }
+    .second-slide__text-container{
+        margin-bottom: 20px;
+    }
+    .title--secondary {
+        font-size: 20px;
     }
 }

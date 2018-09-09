@@ -1,16 +1,21 @@
-$(document).ready(function(){
+$(window).on('load',function () {
+    $('#loadingAssets').fadeOut();
+
     $('#fullPage').fullpage({
-        lazyLoading: false,
+        lazyLoading: false, 
+        menu: '#menu',
+        anchors: ['firstPage', 'secondPage', 'thirdPage','fourthPage'],
         scrollOverflow: false,
-        spaceBetween:'15px',
+        spaceBetween: '15px',
         navigation: true,
         autoScrolling: false,
-        fitToSection: false,
+        fitToSection: true,
     });
     $.fn.fullpage.setAutoScrolling(false);
     
-    
-
+    $('a.toggle').on('click', function(){
+        $('nav').toggleClass('toggled');
+    });
     let swiperPhoto = '';
     let swiperSocial = '';
     let swiperPr = '';
@@ -26,7 +31,7 @@ $(document).ready(function(){
                 clickable: true
             }
         });
-        $('.photography').click(function() {
+        $('.photography').click(function () {
             let swiperPhoto = new Swiper('.photography', {
                 slidesPerView: 1,
                 pagination: {
@@ -67,6 +72,6 @@ $(document).ready(function(){
             });
         })
     });
-    
 
-})
+
+});
